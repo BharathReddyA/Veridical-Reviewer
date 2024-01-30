@@ -1,0 +1,35 @@
+// Define a variable to store the selected star index
+let selectedStarIndex = 0;
+
+// Function to handle star click
+function handleStarClick(starIndex) {
+  // Remove color from all stars
+  for (let i = 1; i <= 5; i++) {
+    const starElement = document.getElementById(`star${i}`);
+    starElement.classList.remove('hovered-Star');
+  }
+
+  // Add color to the clicked star and stars in front of it
+  for (let i = 1; i <= starIndex; i++) {
+    const starElement = document.getElementById(`star${i}`);
+    starElement.classList.add('hovered-Star');
+  }
+
+  // Update the selected star index
+  selectedStarIndex = starIndex;
+
+  // Add your logic here to handle the selected star index
+  // For example, you can send the selected index to the content script
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    const activeTab = tabs[0];
+    chrome.tabs.sendMessage(activeTab.id, { message: 'review_website', selectedStarIndex });
+  });
+}
+
+// Add click event listeners to each star
+for (let i = 1; i <= 5; i++) {
+  const starElement = document.getElementById(`star${i}`);
+  starElement.addEventListener('click', () => handleStarClick(i));
+}
+
+// Other parts of your code...

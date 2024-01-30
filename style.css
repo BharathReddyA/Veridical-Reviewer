@@ -1,0 +1,64 @@
+*{
+  border-radius: 25px;
+}
+
+.stars-container {
+  font-size: 2rem;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.glow {
+  color: #ffd700;
+}
+body {
+  width: 200px;
+  padding: 10px;
+  background-color: #2e2e2e;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+}
+.star {
+  cursor: pointer;
+  font-size: 25px;
+  -webkit-text-stroke: 1px #ffd700;
+}
+.star:hover {
+  color: #ffd700;
+  font-size: 25px;
+  cursor: pointer;
+}
+.hovered-Star{
+  color: #ffd700;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  color: #ffffff;
+  background-color: #2e2e2e;
+  box-shadow: 0px 2px 2px 0px #2e2e2e;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.sign-in-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+.sign-in-link:hover {
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0px 2px 2px 0px #4b4b4b;
+  border-radius: 10px;
+}

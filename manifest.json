@@ -8,7 +8,7 @@
   },
   "permissions": ["tabs"],
   "action": {
-    "default_icon": "icon.png",
+    "default_icon": "icon1.png",
     "default_popup": "popup.html"
   },
   "content_scripts": [
@@ -16,5 +16,11 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "bharath.alluri@qualitics.us",
+      "strict_min_version": "109.0"
+    }
+  }
 }

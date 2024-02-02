@@ -1,26 +1,27 @@
 {
-  "manifest_version": 3,
-  "name": "Veridical Reviewer",
-  "version": "1.0",
-  "description": "A browser extension for reviewing websites",
-  "icons": {
-    "48": "icon.png"
-  },
-  "permissions": ["tabs"],
-  "action": {
-    "default_icon": "icon1.png",
-    "default_popup": "popup.html"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "bharath.alluri@qualitics.us",
-      "strict_min_version": "109.0"
-    }
-  }
+	"manifest_version": 3,
+	"name": "Veridical Reviewer",
+	"version": "1.0",
+	"description": "A browser extension for reviewing websites",
+	"icons": {
+		"48": "icon1.png"
+	},
+	"permissions": [
+		"tabs"
+	],
+	"action": {
+		"default_icon": "icon1.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"content.js"
+			]
+		}
+	],
+	"Transform": "AWS::Serverless-2016-10-31"
 }
